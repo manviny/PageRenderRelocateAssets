@@ -1,6 +1,9 @@
 Page Render Relocate Assets
 ===========================
 
+Idea is quite simple: the module just hooks after page render and alters generated markup, converting any requests to /site/assets/ to another URL specified via module settings. Just to be on the safe side this (at the moment) only alters requests that start with a double quote and /site/assets, ie. "... src="/site/assets/..." would get replaced, while "Look at my /site/assets/!" or "... src="http://example.com/site/assets/..." wouldn't. 
+
+
 WARNING: this ProcessWire module is a proof of concept, not something you should
 use or even install in a production environment. See this thread for context:
 http://processwire.com/talk/topic/4127-can-assets-folder-be-moved-to-another-domainsubdomain/
